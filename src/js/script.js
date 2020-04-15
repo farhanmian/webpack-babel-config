@@ -1,4 +1,4 @@
-import '../css/style.css';
+import '../css/style.scss';
 
 import num from './test';
 
