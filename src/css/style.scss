@@ -3,7 +3,16 @@ $primary: purple;
 @import "~bootstrap/scss/bootstrap";
 
 body {
-	background-color: green;
+	background-color: skyblue;
 }
 
 
+h2 {
+	text-align: center;
+	
+}
+
+.btn {
+	display: block;
+	margin: auto;
+}
