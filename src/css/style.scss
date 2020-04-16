@@ -3,7 +3,7 @@ $primary: purple;
 @import "~bootstrap/scss/bootstrap";
 
 body {
-	background-color: skyblue;
+	background-color: lightgrey;
 }
 
 
@@ -15,4 +15,14 @@ h2 {
 .btn {
 	display: block;
 	margin: auto;
+}
+
+.img {
+	display: block;
+	margin: auto;
+
+	&1 {
+		width: 300px;
+		height: 300px;
+	}
 }
