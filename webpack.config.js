@@ -1,12 +1,16 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 
 module.exports = {
 	entry: './src/js/script.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'js/bundle.js'
+	},
+	devServer: {
+		contentBase: './dist'
 	},
 	plugins: [
 	new HtmlWebpackPlugin({
@@ -15,6 +19,10 @@ module.exports = {
 	}),
 	new MiniCssExtractPlugin({
 		filename: 'css/main.css'
+	}),
+	new webpack.ProvidePlugin({
+		$: 'jquery',
+		jQuery: 'jquery'
 	})
 
 	],
@@ -33,7 +41,7 @@ module.exports = {
 				use: 'html-loader'
 			},
 			{
-				test: /\.png$/,
+				test: /\.(png|jpg|svg|gif)$/,
 				use: {
 					loader: 'file-loader',
 					options: {
